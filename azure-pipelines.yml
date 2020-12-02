@@ -1,9 +1,4 @@
-jobs:
-- job: Loop
-
 pool:
-  vmImage: 'macos-latest'
-
-- script: xcodebuild -version
-    displayName: Xcode version
-
+  vmImage: 'macOS-latest'
+steps:
+- script: echo hello from macOS
