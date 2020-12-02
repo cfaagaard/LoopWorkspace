@@ -6,6 +6,7 @@ steps:
     actions: 'build'
     configuration: 'Release'
     sdk: 'iphoneos'
+    xcWorkspacePath: '**/Loop.xcworkspace'
     scheme: 'Loop'
     packageApp: true
 - task: CopyFiles@2
