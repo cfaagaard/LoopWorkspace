@@ -6,7 +6,7 @@ steps:
     actions: 'build'
     configuration: 'Release'
     sdk: 'iphoneos'
-    scheme: 'Loop (Workspace)'
+    scheme: 'Loop'
     packageApp: true
 - task: CopyFiles@2
   inputs:
