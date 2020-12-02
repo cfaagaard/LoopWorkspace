@@ -5,7 +5,7 @@ steps:
 - script: xcodebuild -version
   displayName: Xcode version
 
-- script: -workspace '**/Loop.xcworkspace' -list
+- script: xcodebuild -workspace '**/Loop.xcworkspace' -list
   displayName: Schemes in workspace
 
 - task: Xcode@5
