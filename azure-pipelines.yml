@@ -1,3 +1,6 @@
+jobs:
+- job: Loop
+
 pool:
   vmImage: 'macos-latest'
 - task: Xcode@5
@@ -6,4 +9,6 @@ pool:
       scheme: 'Loop (Workspace)'
       sdk: 'iphoneos'
       configuration: 'Release'
+      xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
+      xcodeVersion: 'default'
       packageApp: true
