@@ -12,6 +12,7 @@ steps:
   inputs:
     actions: 'build'
     configuration: 'Debug'
+    useXcpretty: false
     sdk: 'iphoneos'
     xcWorkspacePath: '**/Loop.xcworkspace'
     scheme: 'Loop (Workspace)'
@@ -26,3 +27,5 @@ steps:
     pathtoPublish: '$(build.artifactStagingDirectory)/output/$(sdk)/$(configuration)' 
     artifactName: 'drop' 
     publishLocation: 'Container'
+
+    
