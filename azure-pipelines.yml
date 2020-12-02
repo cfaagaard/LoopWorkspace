@@ -4,4 +4,6 @@ pool:
     inputs:
       actions: 'build'
       scheme: 'Loop (Workspace)'
+      sdk: 'iphoneos'
+      configuration: 'Release'
       packageApp: true
