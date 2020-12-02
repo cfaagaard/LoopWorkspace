@@ -11,7 +11,7 @@ steps:
 - task: Xcode@5
   inputs:
     actions: 'build'
-    configuration: 'Release'
+    configuration: 'Debug'
     sdk: 'iphoneos'
     xcWorkspacePath: '**/Loop.xcworkspace'
     scheme: 'Loop (Workspace)'
