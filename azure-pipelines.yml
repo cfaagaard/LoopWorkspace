@@ -3,12 +3,7 @@ jobs:
 
 pool:
   vmImage: 'macos-latest'
-- task: Xcode@5
-    inputs:
-      actions: 'build'
-      scheme: 'Loop (Workspace)'
-      sdk: 'iphoneos'
-      configuration: 'Release'
-      xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-      xcodeVersion: 'default'
-      packageApp: true
+
+- script: xcodebuild -version
+    displayName: Xcode version
+
