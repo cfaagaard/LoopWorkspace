@@ -1,1 +1,7 @@
-test
+pool:
+  vmImage: 'macos-latest'
+  - task: Xcode@5
+    inputs:
+      actions: 'build'
+      scheme: 'Loop (Workspace)'
+      packageApp: true
