@@ -1,6 +1,13 @@
 pool:
   vmImage: 'macOS-latest'
 steps:
+
+- script: xcodebuild -version
+  displayName: Xcode version
+
+- script: -workspace '**/Loop.xcworkspace' -list
+  displayName: Schemes in workspace
+
 - task: Xcode@5
   inputs:
     actions: 'build'
