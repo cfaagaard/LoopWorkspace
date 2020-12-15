@@ -16,7 +16,6 @@ steps:
     actions: 'build'
     configuration: 'Debug'
     useXcpretty: false
-    sdk: 'iphoneos, watchos'
     xcWorkspacePath: '**/Loop.xcworkspace'
     scheme: 'Loop (Workspace)'
     packageApp: true
