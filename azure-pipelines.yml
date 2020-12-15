@@ -8,6 +8,9 @@ steps:
 - script: xcodebuild -workspace $(Build.SourcesDirectory)/Loop.xcworkspace -list
   displayName: Schemes in workspace
 
+- script: xcodebuild -showsdks
+  displayName: Xcode SDKs
+
 - task: Xcode@5
   inputs:
     actions: 'build'
