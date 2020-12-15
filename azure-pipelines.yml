@@ -1,6 +1,7 @@
 pool:
   vmImage: 'macOS-latest'
 steps:
+#see: https://damienaicheh.github.io/ios/azure/devops/2019/12/05/build-sign-your-ios-application-using-azure-devops-en.html
 
 #- script: xcodebuild -version
 #  displayName: Xcode version
