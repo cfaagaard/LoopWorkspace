@@ -34,7 +34,7 @@ steps:
     scheme: 'Loop (Workspace)'
     packageApp: true
     provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
-#    signingOption: 'manual'
+    signingOption: 'manual'
 #    signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
     
 
