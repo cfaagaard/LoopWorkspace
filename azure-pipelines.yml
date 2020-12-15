@@ -15,10 +15,12 @@ steps:
   inputs:
     actions: 'build'
     configuration: 'Debug'
+    sdk: 'iphoneos, watchos'
     useXcpretty: false
     xcWorkspacePath: '**/Loop.xcworkspace'
     scheme: 'Loop (Workspace)'
     packageApp: true
+
 - task: CopyFiles@2
   inputs:
     contents: '**/*.ipa'
