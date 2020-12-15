@@ -2,20 +2,20 @@ pool:
   vmImage: 'macOS-latest'
 steps:
 
-- script: xcodebuild -version
-  displayName: Xcode version
+#- script: xcodebuild -version
+#  displayName: Xcode version
 
-- script: xcodebuild -workspace $(Build.SourcesDirectory)/Loop.xcworkspace -list
-  displayName: Schemes in workspace
+#- script: xcodebuild -workspace $(Build.SourcesDirectory)/Loop.xcworkspace -list
+#  displayName: Schemes in workspace
 
-- script: xcodebuild -showsdks
-  displayName: Xcode SDKs
+#- script: xcodebuild -showsdks
+#  displayName: Xcode SDKs
 
 - task: Xcode@5
   inputs:
     actions: 'build'
     configuration: 'Debug'
-    sdk: 'iphoneos, watchos'
+    sdk: 'iphoneos'
     useXcpretty: false
     xcWorkspacePath: '**/Loop.xcworkspace'
     scheme: 'Loop (Workspace)'
