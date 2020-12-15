@@ -10,10 +10,18 @@ steps:
 
 #- script: xcodebuild -showsdks
 #  displayName: Xcode SDKs
+
+- task: InstallAppleCertificate@2
+  inputs:
+   certSecureFile: '$(p12FileName)'
+   certPwd: '$(p12Password)'
+   keychain: 'temp'
+   deleteCert: true  
+
 - task: InstallAppleProvisioningProfile@1
   inputs:
    provisioningProfileLocation: 'secureFiles'
-   provProfileSecureFile: 'LoopProject.mobileprovision'
+   provProfileSecureFile: '$(provisioningProfile)'
    removeProfile: true
 
 - task: Xcode@5
@@ -25,6 +33,8 @@ steps:
     xcWorkspacePath: '**/Loop.xcworkspace'
     scheme: 'Loop (Workspace)'
     packageApp: true
+    signingOption: 'manual'
+    signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
     provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
 
 - task: CopyFiles@2
